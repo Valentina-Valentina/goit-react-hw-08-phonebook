@@ -1,12 +1,5 @@
 import styled from '@emotion/styled';
-import { FaUserPlus } from 'react-icons/fa';
-
-export const AddUserIcon = styled(FaUserPlus)`
-  width: 20px;
-  height: 20px;
-
-  fill: #fabb18;
-`;
+import { NavLink } from 'react-router-dom';
 
 export const Form = styled.form`
   display: flex;
@@ -30,21 +23,23 @@ export const Input = styled.input`
   color: #000000;
   background: #efefef;
   border-radius: 18px;
-  border-style: none;
+  border: 1px solid #efefef;
 
   :placeholder {
     color: #757575;
   }
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  :hover,
+  :focus {
+    border: 1px solid #000000;
+  }
 `;
 
 export const Button = styled.button`
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
-
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: fit-content;
 
   margin-top: 24px;
   padding: 1.063em 1.5em;
@@ -60,16 +55,23 @@ export const Button = styled.button`
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   :hover,
   :focus {
     color: #000000;
     background-color: rgba(250, 187, 24, 0.1);
     border: 1px solid #000000;
+  }
+`;
 
-    > svg {
-      fill: #000000;
-    }
+export const LoggedLink = styled(NavLink)`
+  margin-top: 8px;
+  color: #8f8f8f;
+
+  cursor: pointer;
+
+  :hover,
+  :focus {
+    color: #fabb18;
   }
 `;

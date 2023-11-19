@@ -1,6 +1,9 @@
 import { useSelector } from 'react-redux';
 
-import { selectContactsFilter, selectContactsList } from 'redux/selectors';
+import {
+  selectContactsFilter,
+  selectContactsList,
+} from 'redux/contacts/selectors';
 
 import { ContactsListItem } from '../ContactListItem/ContactListItem';
 
@@ -15,8 +18,8 @@ export const ContactList = () => {
 
   return (
     <ContactsList>
-      {visibleContacts.map(({ name, phone, id }) => (
-        <ContactsListItem key={id} id={id} name={name} number={phone} />
+      {visibleContacts.map(({ name, number, id }) => (
+        <ContactsListItem key={id} id={id} name={name} number={number} />
       ))}
     </ContactsList>
   );

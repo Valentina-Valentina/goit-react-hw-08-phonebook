@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setContactsFilter } from 'redux/filtersSlice';
-import { selectContactsFilter } from 'redux/selectors';
+import { setContactsFilter } from 'redux/contacts/filtersSlice';
+import { selectContactsFilter } from 'redux/contacts/selectors';
 
 import { Label, Input } from './Filter.module';
 
@@ -16,7 +16,6 @@ export const Filter = () => {
 
   return (
     <Label>
-      Find contacts by name
       <Input
         type="text"
         name="filter"

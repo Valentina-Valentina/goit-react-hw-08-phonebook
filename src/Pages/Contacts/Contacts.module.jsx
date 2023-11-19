@@ -7,12 +7,31 @@ export const AddUserIcon = styled(FaUserPlus)`
 
   fill: #fabb18;
 `;
+export const ContentPageContainer = styled.div`
+  padding: 38px 48px;
+  height: 100vh;
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  border-radius: 32px 32px 0 0;
+  background-color: #f9f9f9;
 `;
+export const ContactNavWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+`;
+export const Title = styled.h2`
+  font-weight: 700;
+  font-size: 34px;
+
+  margin: 0;
+`;
+
+export const FilterWrapper = styled.div`
+  display: flex;
+  margin-left: auto;
+`;
+
+export const Form = styled.form``;
 
 export const Label = styled.label`
   display: flex;
@@ -39,15 +58,15 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
 
   display: flex;
   align-items: center;
   gap: 14px;
   width: fit-content;
 
-  margin-top: 24px;
   padding: 1.063em 1.5em;
+  margin-left: 28px;
 
   background-color: #000000;
 
@@ -67,7 +86,6 @@ export const Button = styled.button`
     color: #000000;
     background-color: rgba(250, 187, 24, 0.1);
     border: 1px solid #000000;
-
     > svg {
       fill: #000000;
     }
